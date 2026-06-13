@@ -1,4 +1,4 @@
-fetch('products.json' + Date.now())
+fetch(`products.json?ts=${Date.now()}`)
 .then(res => res.json())
 .then(data => {
 
