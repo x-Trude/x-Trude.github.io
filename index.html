@@ -8,358 +8,8 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
 
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Inter, sans-serif;
-    background:#0b0b0f;
-    color:white;
-}
-
-/* BACKGROUND */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    radial-gradient(circle at 20% 10%, rgba(0,255,180,0.12), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(0,120,255,0.12), transparent 40%);
-    z-index:-2;
-}
-
-body::after{
-    content:"";
-    position:fixed;
-    inset:0;
-    background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size:50px 50px;
-    opacity:0.2;
-    z-index:-1;
-}
-
-/* HEADER */
-
-header{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    padding:60px 20px 20px;
-    text-align:center;
-}
-
-.logo{
-    width:90px;
-    height:90px;
-    object-fit:contain;
-    margin-bottom:18px;
-    filter:drop-shadow(0 10px 30px rgba(0,255,180,0.2));
-}
-
-h1{
-    font-size:42px;
-    font-weight:900;
-}
-
-h1 span{
-    color:#00ffb3;
-}
-
-.subtitle{
-    margin-top:10px;
-    color:#b5b5b5;
-    font-size:16px;
-}
-
-/* LINKS TOP */
-
-.top-links{
-    display:flex;
-    gap:20px;
-    justify-content:center;
-    margin:25px 0 10px;
-    flex-wrap:wrap;
-}
-
-.top-links a{
-    color:#b5b5b5;
-    text-decoration:none;
-    font-size:14px;
-    padding:8px 14px;
-    border-radius:10px;
-    border:1px solid rgba(255,255,255,0.08);
-    transition:0.2s;
-}
-
-.top-links a:hover{
-    color:white;
-    border-color:#00ffb3;
-    transform:translateY(-2px);
-}
-
-/* SECTIONS */
-
-section{
-    padding:40px 8%;
-}
-
-.section-title{
-    font-size:22px;
-    font-weight:800;
-    margin-bottom:18px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-
-.section-head{
-    width:100%;
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.section-meta{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    font-size:13px;
-    color:#888;
-    font-style:italic;
-    font-weight:400;
-}
-
-.mini-logo{
-    width:40px;
-    height:40px;
-    object-fit:contain;
-    opacity:0.9;
-}
-
-.bar{
-    width:6px;
-    height:20px;
-    background:#00ffb3;
-    border-radius:3px;
-}
-
-/* GRID */
-
-/* CAROUSEL */
-
-.carousel-wrapper{
-    position:relative;
-    display:flex;
-    align-items:center;
-    gap:12px;
-}
-
-.carousel{
-    display:flex;
-    gap:18px;
-    overflow-x:auto;
-    scroll-behavior:smooth;
-    scrollbar-width:none;
-    width:100%;
-    padding:6px;
-}
-
-.carousel.centered {
-    justify-content: center;
-}
-
-.carousel::-webkit-scrollbar{
-    display:none;
-}
-
-/* ZOOM */
-
-#lightbox{
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-
-#lightbox img{
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-}
-
-/* CARD */
-
-.card{
-    flex:0 0 calc((100% - 54px) / 5);
-    background:rgba(255,255,255,0.03);
-    border:1px solid rgba(255,255,255,0.06);
-    border-radius:18px;
-    overflow:hidden;
-    transition:0.25s;
-    cursor:pointer;
-    text-decoration:none;
-    color:white;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-    border-color:rgba(0,255,180,0.4);
-    box-shadow:0 15px 40px rgba(0,0,0,0.5);
-}
-
-.card p{
-    padding:12px 14px 14px;
-    font-size:14px;
-    color:#ccc;
-    line-height:1.3;
-
-}
-
-.card.zoomable{
-    cursor:zoom-in;
-}
-
-
-/* IMAGE */
-
-.thumb{
-    width:100%;
-    aspect-ratio:1/1;
-    background:#151515;
-    overflow:hidden;
-}
-
-.thumb img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-/* NAV */
-
-.nav{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:50%;
-    background:#111;
-    color:white;
-    font-size:26px;
-    cursor:pointer;
-    flex-shrink:0;
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    transition:0.2s;
-}
-
-.nav:hover{
-    background:#00ffb3;
-    color:black;
-}
-
-/* TABLET */
-
-@media(max-width:1000px){
-
-    .card{
-        flex:0 0 calc((100% - 18px) / 2);
-    }
-}
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-	.card{
-		flex:0 0 65%;
-	}
-
-    .nav{
-        display:none;
-    }
-}
-
-@media(max-width:600px){
-
-    .print-head{
-        flex-wrap:wrap;
-    }
-
-    .print-head .top-links{
-        width:100%;
-        margin-top:10px;
-        justify-content:flex-start;
-    }
-}
-
-/* LINKS SECTION (FIX) */
-
-.links{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
-    margin-top:10px;
-}
-
-.linkbox{
-    padding:20px;
-    border-radius:16px;
-    background:rgba(255,255,255,0.03);
-    border:1px solid rgba(255,255,255,0.06);
-    transition:0.25s;
-}
-
-.linkbox:hover{
-    transform:translateY(-4px);
-    border-color:rgba(0,255,180,0.3);
-    background:rgba(255,255,255,0.05);
-}
-
-.linkbox h3{
-    margin-bottom:10px;
-    color:#00ffb3;
-    font-size:16px;
-}
-
-.linkbox p{
-    color:#aaa;
-    font-size:14px;
-    line-height:1.4;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-    .links{
-        grid-template-columns:1fr;
-    }
-}
-
-.linkbox:visited {
-    color: inherit;
-}
-
-.linkbox{
-    display:block;
-    text-decoration:none;
-    color:inherit;
-}
-
-</style>
 </head>
 
 <body>
@@ -377,17 +27,17 @@ section{
     <!-- LIENS UTILES EN HAUT -->
     <div class="top-links">
 
-        <a href="https://www.thingiverse.com/" target="_blank">
-            Thingiverse
-        </a>
-		
-		<a href="https://xtrude.gumroad.com/" target="_blank">
+		<a href="https://cults3d.com/fr/utilisateurs/xTrude" target="_blank">
             Boutique
         </a>
-
-        <a href="#">
-            Contact
+		
+        <a href="https://sh1tn4de-configurator.pages.dev/" target="_blank">
+            Configurator
         </a>
+
+        <a href="contact.html">
+			Contact
+		</a>
 
     </div>
 
@@ -513,16 +163,16 @@ section{
     <div class="links">
 
 		<a class="linkbox" href="https://sh1tn4de-configurator.pages.dev/" target="_blank">
-			<h3>Sh1tNade-Configurator</h3>
+			<h3>Sh1tN4de-Configurator</h3>
 			<p>Accède au viewer 3D interactif pour personnaliser les modèles.</p>
 		</a>
 
-        <div class="linkbox">
-            <h3>Thingiverse</h3>
-            <p>Tous les modèles et ressources de téléchargement.</p>
+        <div class="linkbox" href="https://cults3d.com/fr/utilisateurs/xTrude" target="_blank">
+            <h3>Cults3D</h3>
+            <p>Modèles et ressources de téléchargement.</p>
         </div>
 
-        <div class="linkbox">
+        <div class="linkbox" href="contact.html">
             <h3>Contact</h3>
             <p>Support et demandes de modèles personnalisés.</p>
         </div>
