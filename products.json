@@ -28,6 +28,11 @@
 
   "printsh1t": [
 	{
+      "title": "Montage & MD EMPLOI",
+      "image": "printshit-img/assemblage.jpg",
+      "url": "doc_assembly.html"
+    },
+	{
       "title": "DOCUMENTATION - Parts",
       "image": "videos/parthtml.mp4",
       "url": "doc_parts.html"

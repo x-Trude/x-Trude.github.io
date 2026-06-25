@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>xTrude - Sh1tN4de - Assemblage</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
+
+<style>
+	
+/* =========================
+   NAVIGATION GUIDE FIXE
+   ========================= */
+
+.guide-nav{
+    position:sticky;
+    top:15px;
+    z-index:1000;
+
+    width:fit-content;
+    max-width:calc(100% - 20px);
+
+    margin:5px auto 0px;
+    padding:10px;
+
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+
+    background:rgba(15,15,15,0.85);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.guide-nav a{
+    text-decoration:none;
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    font-size:14px;
+    font-weight:600;
+
+    background:rgba(255,255,255,0.04);
+
+    transition:.25s;
+}
+
+.guide-nav a:hover{
+    background:#00ffb3;
+    color:black;
+    transform:translateY(-2px);
+}
+
+/* Empêche les titres d'être cachés sous le menu */
+
+.guide-card{
+    scroll-margin-top:120px;
+}
+
+/* Scroll doux */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .guide-nav{
+    position:sticky;
+    top:15px;
+    z-index:1000;
+
+    width:auto;
+    max-width:calc(100% - 30px);
+
+    margin:5px auto 0px;
+    padding:10px;
+
+    display:flex;
+    justify-content:center;
+    gap:5px;
+    flex-wrap:wrap;
+
+    background:rgba(15,15,15,0.85);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .guide-nav a{
+    text-decoration:none;
+    color:white;
+
+    padding:8px 15px;
+
+    border-radius:10px;
+
+    font-size:14px;
+    font-weight:600;
+
+    background:rgba(255,255,255,0.04);
+
+    transition:.25s;
+    }
+
+    .guide-nav a:hover{
+        background:#00ffb3;
+        color:black;
+    }
+}
+
+.back-top{
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#00ffb3;
+    color:black;
+
+    text-decoration:none;
+
+    font-size:24px;
+    font-weight:bold;
+
+    box-shadow:0 8px 25px rgba(0,255,179,.35);
+
+    z-index:2000;
+
+    transition:.25s;
+}
+
+.back-top:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+/* BLOCS ETAPES */
+
+.guide-section{
+    max-width:1200px;
+    margin:auto;
+}
+
+.guide-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:40px;
+}
+
+.guide-card h1{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.guide-card h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:25px;
+	color:#00ffb3;
+
+}
+
+.guide-video{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.guide-video video{
+    width:100%;
+    max-width:720px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:black;
+}
+
+.guide-description{
+    color:#b5b5b5;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.guide-description .intro{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.guide-description h3{
+    color:white;
+    margin:20px 0 10px;
+    font-size:18px;
+}
+
+.guide-description em{
+    color:#b5b5b5;
+    font-size:14px;
+}
+
+.parts-list,
+.assembly-list{
+    text-align:left;
+    margin:0px 30px;
+}
+
+.parts-list li,
+.assembly-list li{
+	margin-bottom:16px;
+}
+
+.ligne-separation{
+	margin-top: 25px;
+	margin-bottom: 2px;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+/* SCROLL DOUX */
+
+html{
+    scroll-behavior:smooth;
+}
+
+@media(max-width:700px){
+
+    .guide-card{
+        padding:20px;
+    }
+
+    .guide-card h2{
+        font-size:26px;
+    }
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<a href="index.html" class="top-back-button">
+← Accueil
+</a>
+
+<header>
+
+    <img src="img/logo.png" class="logo" alt="xTrude">
+
+    <h1>x<span>Trude</span></h1>
+
+    <div class="top-links">
+
+		<a href="https://cults3d.com/fr/utilisateurs/xTrude" target="_blank">
+            Boutique
+        </a>
+		
+        <a href="https://sh1tn4de-configurator.pages.dev/" target="_blank">
+            Configurator
+        </a>
+
+        <a href="contact.html">
+			Contact
+		</a>
+
+    </div>
+	
+    <div class="subtitle">
+        <b>Assemblage</b> et <b>Fonctionnement</b> <b style="color:#00ffb3;">SH1TN4DE</b>
+    </div>
+	
+</header>
+
+<!-- SOMMAIRE -->
+
+	<div class="guide-nav">
+		<a href="#sommaire">Sommaire</a>
+		<a href="#montage">Montage</a>
+		<a href="#cap">MD Emploi</a>
+	</div>
+
+	
+<section class="guide-section">
+
+	<!-- Sommaire -->
+	
+	<div class="guide-card" id="sommaire">
+		
+        <h2>Sommaire</h2>
+		
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					Page d'assemblage et mode d'emploi de la <b style="color:#00ffb3;">Sh1tN4de</b>, la grenade d'impact pour Airsoft</em><br>
+					<h1>Montage</h1>
+					
+					<h3><a href="#checklist" style="color:#00ffb3; text-decoration:none;">Check-List</a></h3> 
+			    	Liste completes des parties imprimé et de la quicailleries nécessaire pour une Sh1tn4de.<br>
+					
+					<h3><a href="#checkup" style="color:#00ffb3; text-decoration:none;">Check-Up</a></h3> 
+			    	Un check-up avant montage<br>
+					
+					<h3><a href="#assembly" style="color:#00ffb3; text-decoration:none;">Assemblage</a></h3> 
+			    	Assemblage des pièces. <br><br>
+					<hr class="ligne-separation"><br>
+					
+					<h1>Mode d'emploi</h1>
+					
+					<h3><a href="#secu" style="color:#00ffb3; text-decoration:none;">Sécurité</a></h3> 
+			    	Quelques consignes et regles de sécurité <br>
+					
+					<h3><a href="#striker" style="color:#00ffb3; text-decoration:none;">Réglage sensibilité d'impact</a></h3> 
+			    	Les reglages pour un déclengement efficace.<br>
+					
+					<h3><a href="#couv" style="color:#00ffb3; text-decoration:none;">Fonctionnement de la bague de sécurité</a></h3> 
+			    	Et pour en finir avec les pieces à imprimer, le couvercle. Il sert a vérouiller le tout.<br>
+					
+					<h3><a href="#hardware" style="color:#00ffb3; text-decoration:none;">Chargement et Rechargement Amorce</a></h3> 
+			    	La liste des composants de quincailleries.
+					
+					<h3><a href="#hardware" style="color:#00ffb3; text-decoration:none;">Troubleshooting</a></h3> 
+			    	Problemes qui peuvent arriver.<br><br>
+					<hr class="ligne-separation"><br>
+					
+			</p>
+		</div>
+	</div>
+	
+    <!-- ASSEMBLAGE -->
+
+        <div class="guide-card" id="assemblage">
+
+		<h1>MONTAGE</h1>
+		<hr class="ligne-separation" id="checklist"><br>
+		<br>
+        <h2>Check-List</h2>
+
+		<div class="guide-description">
+
+		<p class="intro">
+				<em>
+					Liste completes des parties imprimé et de la quicailleries nécessaire pour une Sh1tn4de.</em>
+					
+				<h3>Pieces imprimé :</h3> 
+				<ul class="parts-list">
+				<b><li>Body</b> <em>Body.stl (choisir avec le <a href="#body" style="color:#00ffb3; text-decoration:none;"><b>CONFIGURATOR</b></a>)</em></li>
+				<b><li>Striker parts :</b>	<em>Amorce A, B et C.stl, Guide.stl</em></li>
+				<b><li>Capuchon</b> <em>Cap.stl</em></li>
+				<b><li>Bague</b> <em>Bag.stl (choisir avec le <a href="#body" style="color:#00ffb3; text-decoration:none;"><b>CONFIGURATOR</b></a>)</em></li>
+				<b><li>Couvercle</b> <em>Couv.stl</em></li>	
+				</ul>
+
+				<h3>Quincailleries :</h3> 
+				<ul class="parts-list">
+				<b><li>x1 Vis M5x50mm</b>
+				<em>tête chanfreiné d'un diametre maximum de 10mm</em></li>
+				<b><li>x2 Rondelle M5</b>
+				<em> Rondelle M5 avec diametre maximum de 18mm<br>
+				L'une est optionnel pour le renforcement du <a href="#body" style="color:#00ffb3; text-decoration:none;"><b>"BODY"</b></a></em></li>
+				<b><li>x3 écrous M5</b></li>
+				<b><li>x1 Ressort 1.2x14x25</b>
+				<em>Diametre du fil x diametre exterieur x longeur</em></li>
+				
+			</ul>
+			</p>
+
+		</div>
+		
+		<hr class="ligne-separation" id="checkup"><br>
+		<br>
+        <h2>Check-Up</h2>
+
+		<div class="guide-description">
+
+		<p class="intro">
+				<em>
+					Un check-up avant montage pour vérifier conformités des pièces..</em>
+					
+					<h3>Qualité de réglage d'imprimante</h3> 
+					Le modele est concu pour imprimante avec un Tolerance de 0.1mm
+			    	La qualité de votre imprimante est primordiale pour le bon fonctionnement. Toujours faire le Bed Level avant impression des STL.
+					La Clearance (le jeu/espace libre) de votre pieces doit faire au maximum 0.1mm soit 1 micron. Si ce n'est pas le cas, il y aura pas assez ou trop
+					de jeu entres les parties, il y'a un risque de dysfonctionnement majeur.
+					
+					<h3>Qualité d'impression</h3> 
+					Vérifier qu'il n'y a pas de bavure dans les orifices...... De wraping ou tout autres défault qui pourrait posser des problemes
+					de glissement 
+					
+					<h3>Parametre d'impression testé:<br>
+					<em> Infill 50%+, 3+ walls, 5 bottom-layers. </em> </h3> 
+					
+			</p>
+
+		</div>
+		
+		<hr class="ligne-separation" id="assembly"><br>
+		<br>
+        <h2>Assemblage</h2>
+
+		<div class="guide-description">
+
+		<ol class="assembly-list">
+			<li>Insérer une vis <b>M5 x 50 mm</b> dans le <b>guide</b>, puis placer un écrou M5 dans l’emplacement prévu. Ajouter une goutte de frein filet, puis serrer.</li>
+			<li>Insérer <b>la vis et le guide</b> dans le <b>Capuchon.stl</b> jusqu’à butée.</li>
+			<li>Placer le ressort dans l’emplacement du <b>Capuchon.stl</b>, puis visser un écrou M5 jusqu’à venir en contact avec le ressort.</li>
+			<li>Insérer un écrou dans <b>Amorce_A.stl</b>, comprimer le ressort, puis visser jusqu’au contact entre les deux écrous.</li>
+			<li>Insérer une amorce dans <b>Amorce_C</b>, la glisser dans <b>Amorce_B</b>, puis clipser l’ensemble dans <b>Amorce_A.stl</b>.</li>
+		</ol>
+
+		</div>
+		
+		<hr class="ligne-separation">
+
+    </div>
+
+    <!-- MODE EMPLOI -->
+	
+	    <div class="guide-card" id="hardware">
+		
+		<h1>MODE D'EMPLOI</h1>
+		<hr class="ligne-separation" id="secu"><br>
+		<br>
+        <h2>Regles de sécurité</h2>
+		
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					Quelques regles de Sécurité basique et évidente a respecter.</em>
+					
+					<h3>Avertissement</h3> 
+					Je ne suis pas reponsable des accidents qui pourrait etre lié a une mauvaise utilisation, pour éviter tout
+					accident, il est important d'effectuer toutes les vérifications ci dessus, et d'utiliser la grenade inteligemment et avec
+					précaution. Pas de tir en cloches, pas de lancer violent, port de gants, Si la détonation est trop puissante, ne pas lancer en intérieur
+					faire attention a l'environnement, ne pas lancer sur terrain sec, l'amorce crée des étincelles a l'impact. Ne pas laisser les 
+					déchet d'amorce sur le terrains.
+					
+					<h3>Regles sur le terrain</h3> 
+					Pour garder un bon esprit de jeu, il est obligatoire de demander l'autorisation de l'utilisation aux organisateurs de la partie, il est important
+					de préciser le mode d'amorce utilisé (209 primer, 6mm a blanc, 8 ring ou mono amorce)	
+			</p>
+		</div>
+		<br>
+	<hr class="ligne-separation"><br>
+	<br>
+	<h2>Réglage de sensibilité du Striker</h2>
+		
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					Méthodes pour modifier la sensibilité du striker a l'impact</em>
+					
+					<h3>Plus de sensibilité</h3> 
+					Pour augmenter la sensibilité du déclenchement de la grenade a l'impact, il faut visser la partie du Striker "Amorce_A".
+					en serrant, la compresision du ressort sera plus forte.
+					
+					<h3>Moins de sensibilité</h3> 
+					A l'inverse, si la grenade est trop sensible au moment de l'impact, il faut faire l'inverse. dévisser la partie du Striker "Amorce_A".
+					en dévissant, la compresision du ressort sera plus faible.
+			</p>
+		</div>
+		<br>
+	<hr class="ligne-separation"><br>
+	
+    </div>
+
+    <!-- ETAPE 7 -->
+	
+    <div class="guide-card" id="assemblage">
+
+        <h2>Assemblage</h2>
+
+        <h1>1 - Striker</h1>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/striker.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+
+		<div class="guide-description">
+
+		<ol class="assembly-list">
+			<li>Insérer une vis <b>M5 x 50 mm</b> dans le <b>guide</b>, puis placer un écrou M5 dans l’emplacement prévu. Ajouter une goutte de frein filet, puis serrer.</li>
+			<li>Insérer <b>la vis et le guide</b> dans le <b>Capuchon.stl</b> jusqu’à butée.</li>
+			<li>Placer le ressort dans l’emplacement du <b>Capuchon.stl</b>, puis visser un écrou M5 jusqu’à venir en contact avec le ressort.</li>
+			<li>Insérer un écrou dans <b>Amorce_A.stl</b>, comprimer le ressort, puis visser jusqu’au contact entre les deux écrous.</li>
+			<li>Insérer une amorce dans <b>Amorce_C</b>, la glisser dans <b>Amorce_B</b>, puis clipser l’ensemble dans <b>Amorce_A.stl</b>.</li>
+		</ol>
+
+		</div>
+		
+		<hr class="ligne-separation">
+
+    </div>
+
+</section>
+	<script src="js/app.js"></script>
+	<a href="#" class="back-top">↑</a>
+</body>
+</html>
