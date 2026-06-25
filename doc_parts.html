@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>xTrude - Sh1tN4de Parts - Documentation</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
+
+<style>
+	
+/* =========================
+   NAVIGATION GUIDE FIXE
+   ========================= */
+
+.guide-nav{
+    position:sticky;
+    top:15px;
+    z-index:1000;
+
+    width:fit-content;
+    max-width:calc(100% - 20px);
+
+    margin:20px auto 40px;
+    padding:10px;
+
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    flex-wrap:wrap;
+
+    background:rgba(15,15,15,0.85);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.08);
+    border-radius:18px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+.guide-nav a{
+    text-decoration:none;
+    color:white;
+
+    padding:10px 16px;
+
+    border-radius:10px;
+
+    font-size:14px;
+    font-weight:600;
+
+    background:rgba(255,255,255,0.04);
+
+    transition:.25s;
+}
+
+.guide-nav a:hover{
+    background:#00ffb3;
+    color:black;
+    transform:translateY(-2px);
+}
+
+/* Empêche les titres d'être cachés sous le menu */
+
+.guide-card{
+    scroll-margin-top:120px;
+}
+
+/* Scroll doux */
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .guide-nav{
+        position:fixed;
+        top:50%;
+        left:0px;
+        transform:translateY(-50%);
+
+        display:flex;
+        flex-direction:column;
+        gap:20px;
+
+        padding:8px 4px;
+
+        background:rgba(15,15,15,0.75);
+        backdrop-filter:blur(12px);
+
+        border:1px solid rgba(255,255,255,0.08);
+        border-radius:12px;
+
+        z-index:1000;
+    }
+
+    .guide-nav a{
+        width:28px;
+        height:auto;
+
+        padding:15px 0;
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        font-size:11px;
+        font-weight:700;
+
+        text-align:center;
+
+        writing-mode:vertical-rl;
+        text-orientation:upright;
+
+        white-space:nowrap;
+        letter-spacing:1px;
+
+        color:white;
+    }
+
+    .guide-nav a:hover{
+        background:#00ffb3;
+        color:black;
+    }
+}
+
+.back-top{
+    position:fixed;
+
+    bottom:25px;
+    right:25px;
+
+    width:55px;
+    height:55px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#00ffb3;
+    color:black;
+
+    text-decoration:none;
+
+    font-size:24px;
+    font-weight:bold;
+
+    box-shadow:0 8px 25px rgba(0,255,179,.35);
+
+    z-index:2000;
+
+    transition:.25s;
+}
+
+.back-top:hover{
+    transform:translateY(-4px) scale(1.05);
+}
+
+/* BLOCS ETAPES */
+
+.guide-section{
+    max-width:1200px;
+    margin:auto;
+}
+
+.guide-card{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.06);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:40px;
+}
+
+
+.guide-card h2{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:25px;
+	color:#00ffb3;
+
+}
+
+.guide-video{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.guide-video video{
+    width:100%;
+    max-width:720px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    background:black;
+}
+
+.guide-description{
+    color:#b5b5b5;
+    line-height:1.8;
+    font-size:16px;
+}
+
+.guide-description .intro{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.guide-description h3{
+    color:white;
+    margin:20px 0 10px;
+    font-size:18px;
+}
+
+.parts-list,
+.assembly-list{
+    text-align:left;
+    margin:0px 30px;
+}
+
+.parts-list li,
+.assembly-list li{
+	margin-bottom:8px;
+}
+
+.ligne-separation{
+	margin-top: 25px;
+	margin-bottom: 2px;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+/* SCROLL DOUX */
+
+html{
+    scroll-behavior:smooth;
+}
+
+@media(max-width:700px){
+
+    .guide-card{
+        padding:20px;
+    }
+
+    .guide-card h2{
+        font-size:26px;
+    }
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<a href="index.html" class="top-back-button">
+← Accueil
+</a>
+
+<header>
+
+    <img src="img/logo.png" class="logo" alt="xTrude">
+
+    <h1>x<span>Trude</span></h1>
+
+    <div class="top-links">
+
+		<a href="https://cults3d.com/fr/utilisateurs/xTrude" target="_blank">
+            Boutique
+        </a>
+		
+        <a href="https://sh1tn4de-configurator.pages.dev/" target="_blank">
+            Configurator
+        </a>
+
+        <a href="contact.html">
+			Contact
+		</a>
+
+    </div>
+	
+    <div class="subtitle">
+        <b>Guide d'assemblage et documentation SH1TN4DE</b>
+    </div>
+	
+</header>
+
+<!-- SOMMAIRE -->
+
+	<div class="guide-nav">
+		<a href="#body">Body</a>
+		<a href="#cap">Capuchon</a>
+		<a href="#bag">Bague</a>
+		<a href="#striker">Striker</a>
+		<a href="#couv">Couvercle</a>
+	</div>
+
+	
+<section class="guide-section">
+
+    <!-- Parts -->
+
+    <div class="guide-card" id="body">
+	
+        <h2>Body</h2>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/body.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+		
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					Le "body" est le l'élement principal de la grenade d'impact. Le pas de vis avec ces 3 entrés de filetage de 120° est concu pour une ouvereture 
+					simple et rapide, facilitant son rechargement.</em>
+					
+					<h3>Fonctionnalité</h3> 
+			    	Il possede 8 sortie sur les cotés et une sortie dessous pour une détonation a 360°.
+					Un emplacement et prévu pour renforcer la zone d'impact du striker a l'interieur du body. Pour ça, il suffit
+					de coller une rondelle M5 d'un diametre exterieur de 18mm maximum.
+					
+					<h3>Skin et texture</h3> 
+					Plusieurs apparence de "body" ont étaient realisé afin de vous proposez la possibilité de créer votre grenade personalisée. 
+					Un configurateur virtuel est également disponible pour visualiser l'apercu du rendu final.<br>
+					Pour en savoir plus, <a href ="" style="color:#00ffb3; text-decoration:none;">rendez vous ici </a>
+					
+					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls, 5 bottom-layers. </em> </h3> 
+					
+			</p>
+			
+		</div>
+		
+		<hr class="ligne-separation">
+
+	</div>
+	
+    <!-- ETAPE 2 -->
+
+    <div class="guide-card" id="cap">
+        <h2>Capuchon (cap)</h2>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/cap.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+		
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					Le Capuchon est le l'élement secondaire de la grenade d'impact.</em>
+
+					<h3>Fonctionnalité</h3> 
+					Il dispose d'une ligne tout autour destiné a etre peinte en rouge, l'objectif est 
+					de permettre a l'utilisateur d'avoir un visuel permettant de dissocier rapidement si la sh1tn4de est sur SAFE ou sur ARMED.
+					Le trou sur cette ligne offre la possibilité de la convertir en un piège filaire.<br>
+					Pour en savoir plus sur la conversion, <a href ="" style="color:#00ffb3; text-decoration:none;">rendez vous ici </a>
+					
+					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls, 5 bottom-layers. </em> </h3> 
+			</p>
+		</div>
+	<hr class="ligne-separation">
+	</div>
+
+    <!-- ETAPE 3 -->
+
+    <div class="guide-card" id="bag">
+
+        <h2>Bague</h2>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/bag.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+		
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					La Bague est l'element d'armement et de securité de la grenade d'impact.</em>
+
+					<h3>Texture et Fonctionnalité</h3> 
+					Plusieurs textures a variation de grip sont disponibles.<br>
+					<br>
+					Pour dévérouiller la grenade, il faut monter la bague jusqu'en buté, puis faire un quart de tour 
+					dans le sens des aiguilles d'une montre.<br>
+					Pour la vérouiller un fois armé il faut refaire un quart de tour dans le sens opposé, puis redescendre la bague.
+					
+					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls, support. </em> </h3> 
+			</p>
+		</div>
+		
+	<hr class="ligne-separation">
+    </div>
+
+    <!-- ETAPE 4 -->
+
+    <div class="guide-card" id="striker">
+
+        <h2>Striker</h2>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/striker.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					Les parties du Striker (interne) sont les pièces nécessaires au
+					fonctionnement du déclencheur. Lors de l'impact, ces pièces sous
+					contrainte se libèrent afin de provoquer la percussion de l'amorce.
+				</em>
+			</p>
+
+			<h3>Pièces à imprimer :<em> Infill 99%, 5 walls, support  pour amorce A et B. </em></h3> 
+			
+			<ul class="parts-list">
+				<b><li>Amorce_A.stl</li>
+				<li>Amorce_B.stl</li>
+				<li>Amorce_C_monocap.stl</li>
+				<li>Guide.stl</li></B>
+			</ul>
+			<em>
+				"<b>Amorce C</b>" disposera à l’avenir d’options permettant d’adapter différents types d’amorces :
+				Ring Cap, 209 Primer, .6 mm à blanc  et anneaux 8 Ring, <b>le tout sous votre propre responsabilité</b>
+			</em>
+
+		</div>
+		
+	<hr class="ligne-separation">
+    </div>
+
+    <!-- ETAPE 5 -->
+
+    <div class="guide-card" id="couv">
+
+        <h2>Couvercle</h2>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/couv.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+		
+		<div class="guide-description">
+
+			<p class="intro">
+				<em>
+					Pour fermé le tout, le couvercle.</em>
+
+					<h3>Fonctionnalité</h3> 
+					Un simple couvercle a visser sur le capuchon une fois l'assemblage terminé.<br>
+					Elle dispose également d'une ligne tout autour destiné a etre peinte en verte, et d'un texte "SAFE". Si visible, alors la sécurité est mise.<br>
+					Pour en savoir plus sur l'assemblage, <a href ="" style="color:#00ffb3; text-decoration:none;">rendez vous ici </a>
+					
+					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls. </em> </h3> 
+			</p>
+		</div>
+	<hr class="ligne-separation">
+    </div>
+
+    <!-- ETAPE 6 -->
+	
+    <div class="guide-card" id="assemblage">
+
+        <h2>Assemblage</h2>
+
+        <h1>1 - Striker</h1>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/striker.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+
+		<div class="guide-description">
+
+		<ol class="assembly-list">
+			<li>Insérer une vis <b>M5 x 50 mm</b> dans le <b>guide</b>, puis placer un écrou M5 dans l’emplacement prévu. Ajouter une goutte de frein filet, puis serrer.</li>
+			<li>Insérer <b>la vis et le guide</b> dans le <b>Capuchon.stl</b> jusqu’à butée.</li>
+			<li>Placer le ressort dans l’emplacement du <b>Capuchon.stl</b>, puis visser un écrou M5 jusqu’à venir en contact avec le ressort.</li>
+			<li>Insérer un écrou dans <b>Amorce_A.stl</b>, comprimer le ressort, puis visser jusqu’au contact entre les deux écrous.</li>
+			<li>Insérer une amorce dans <b>Amorce_C</b>, la glisser dans <b>Amorce_B</b>, puis clipser l’ensemble dans <b>Amorce_A.stl</b>.</li>
+		</ol>
+
+		</div>
+		
+		<hr class="ligne-separation">
+
+<h1>2 - Striker</h1>
+        <div class="guide-video">
+            <video autoplay loop muted playsinline>
+				<source src="videos/striker.mp4" type="video/mp4">
+				Votre navigateur ne supporte pas la vidéo.
+			</video>
+        </div>
+
+		<div class="guide-description">
+
+		<ol class="assembly-list">
+			<li>Insérer une vis <b>M5 x 50 mm</b> dans le <b>guide</b>, puis placer un écrou M5 dans l’emplacement prévu. Ajouter une goutte de frein filet, puis serrer.</li>
+			<li>Insérer <b>la vis et le guide</b> dans le <b>Capuchon.stl</b> jusqu’à butée.</li>
+			<li>Placer le ressort dans l’emplacement du <b>Capuchon.stl</b>, puis visser un écrou M5 jusqu’à venir en contact avec le ressort.</li>
+			<li>Insérer un écrou dans <b>Amorce_A.stl</b>, comprimer le ressort, puis visser jusqu’au contact entre les deux écrous.</li>
+			<li>Insérer une amorce dans <b>Amorce_C</b>, la glisser dans <b>Amorce_B</b>, puis clipser l’ensemble dans <b>Amorce_A.stl</b>.</li>
+		</ol>
+
+		</div>
+
+    </div>
+
+</section>
+
+	<a href="#" class="back-top">↑</a>
+</body>
+</html>

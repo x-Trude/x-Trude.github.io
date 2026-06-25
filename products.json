@@ -1,28 +1,37 @@
 {
   "splash": [
     {
-      "title": "Support rail T-Nuts M6 et M8 - Entraxe 165mm",
+      "title": "Rail blocker T-Nuts M6 et M8 - Entraxe 165mm",
       "image": "splash-img/sprus.jpg",
-      "url": "https://cults3d.com/fr/mod%C3%A8le-3d/divers/wingfoil-universal-165-mm-foil-track-t-nut-spacer-retainer"
+      "url": "https://cults3d.com/fr/mod%C3%A8le-3d/divers/wingfoil-universal-165-mm-foil-track-t-nut-spacer-retainer",
+	  "loupe": true
     },
 	{
-      "title": "Support GoPro Wing",
+      "title": " Wing Camera Support GoPro, DJI, 360...",
       "image": "splash-img/gpmount.jpg",
-      "url": "https://cults3d.com/fr/cr%C3%A9ations/wing-camera-support-for-gopro-dji-wingfoil"
+      "url": "https://cults3d.com/fr/cr%C3%A9ations/wing-camera-support-for-gopro-dji-wingfoil",
+	  "loupe": true
     },
 	{
       "title": "Rake Top Plate - Gong v1  [−2°,..., +1,5°, +2°]",
-      "image": "splash-img/rake2.jpg",
-      "url": "https://cults3d.com/fr/mod%C3%A8le-3d/divers/wingfoil-cale-de-rake-adjustable-shim-pour-platine-gong-v1"
+      "image": "splash-img/rake.jpg",
+      "url": "https://cults3d.com/fr/mod%C3%A8le-3d/divers/wingfoil-cale-de-rake-adjustable-shim-pour-platine-gong-v1",
+	  "loupe": true
     },
     {
-      "title": "Ancienne version de rake - Gong v1",
-      "image": "splash-img/rake.jpg",
-      "url": "404.html"
+      "title": "Double screw compagnon",
+      "image": "splash-img/dbscrew.jpg",
+      "url": "404.html",
+	  "loupe": true
     }
   ],
 
   "printsh1t": [
+	{
+      "title": "DOCUMENTATION - Parts",
+      "image": "videos/parthtml.mp4",
+      "url": "doc_parts.html"
+    },
     {
       "title": "SH1TN4DE Preview Body2",
       "image": "printshit-img/flash.jpg",
@@ -41,7 +50,8 @@
 		{
       "title": "SH1TN4DE ViewCut v0.4",
       "image": "printshit-img/cut.jpg",
-      "url": "404.html"
+      "url": "404.html",
+	  "loupe": true
     },
 		{
       "title": "SH1TN4DE v0.1-v0.2",

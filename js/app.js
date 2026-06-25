@@ -1,4 +1,4 @@
-fetch(`products.json?ts=${Date.now()}`)
+fetch('products.json')
 .then(res => res.json())
 .then(data => {
 
@@ -18,25 +18,40 @@ function renderProducts(products, containerId){
 
     products.forEach(product => {
 
+        const isVideo = /\.(mp4|webm|ogg)$/i.test(product.image);
+
+        const media = isVideo
+            ? `
+                <video autoplay muted loop playsinline>
+                    <source src="${product.image}" type="video/mp4">
+                </video>
+              `
+            : `
+                <img src="${product.image}" alt="${product.title}">
+              `;
+
         if (product.zoom === true) {
 
             container.innerHTML += `
                 <div class="card zoomable" data-img="${product.image}">
                     <div class="thumb">
-                        <img src="${product.image}">
+                        ${media}
                     </div>
                     <p>${product.title}</p>
                 </div>
             `;
         }
-
         else {
 
             container.innerHTML += `
-                <a class="card" href="${product.url}" target="_blank">
+                <a class="card ${product.loupe ? 'loupe' : ''}"
+                   href="${product.url}"
+                   target="_blank">
+
                     <div class="thumb">
-                        <img src="${product.image}">
+                        ${media}
                     </div>
+
                     <p>${product.title}</p>
                 </a>
             `;
@@ -110,3 +125,33 @@ window.addEventListener("resize", () => {
     updateCarouselCentering("print-grid");
     updateCarouselCentering("divers-grid");
 });
+
+	//zoom
+function resetLoupe() {
+    document.querySelectorAll(".card.loupe img").forEach(img => {
+        img.style.transform = "scale(1)";
+        img.style.transformOrigin = "center center";
+    });
+}
+
+document.addEventListener("mousemove", (e) => {
+
+    const card = e.target.closest(".card.loupe");
+
+    if (!card) {
+        resetLoupe();
+        return;
+    }
+
+    const img = card.querySelector("img");
+    const rect = img.getBoundingClientRect();
+
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+
+    img.style.transformOrigin = `${x}% ${y}%`;
+    img.style.transform = "scale(2.5)";
+});
+
+document.addEventListener("mouseleave", resetLoupe);
+window.addEventListener("blur", resetLoupe);

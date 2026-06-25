@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact - xTrude</title>
+
+<link rel="icon" href="img/logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<a href="index.html" class="top-back-button">
+		← Accueil
+	</a>
+
+<header>
+
+    <img src="img/logo.png" class="logo" alt="xTrude">
+
+    <h1>x<span>Trude</span></h1>
+
+    <div class="subtitle">
+        Contact & informations
+    </div>
+
+</header>
+
+<section class="contact-page">
+
+    <div class="section-title">
+        <div class="bar"></div>
+
+        <div class="section-head">
+
+            <span>Contact</span>
+
+            <div class="section-meta">
+                <span>Support • Questions • Personnalisation</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+
+            <h2>📧 Contact principal</h2>
+
+            <p>
+                Pour toutes recommandations, questions,
+                demandes de modif /
+                personnalisations,
+                vous pouvez me contacter directement par mail.
+            </p>
+
+			<button class="contact-button copy-mail"
+					data-mail="xtrude3d@proton.me">
+
+				📧 xtrude3d@proton.me
+
+			</button>
+
+        </div>
+
+        <div class="contact-card">
+
+            <h2>👽 Reddit</h2>
+
+            <p>
+                Retrouvez les projets, previews,
+                tests et discussions autour des modèles.
+            </p>
+
+            <a href="https://www.reddit.com/user/xTrude3D/"
+               target="_blank"
+               class="contact-button">
+
+               Voir le profil Reddit
+
+            </a>
+
+        </div>
+
+        <div class="contact-card">
+
+            <h2>🛒 Boutique</h2>
+
+            <p>
+                STL premium, packs,
+                accessoires et futures releases.
+            </p>
+
+            <a href="https://cults3d.com/fr/utilisateurs/xTrude"
+               target="_blank"
+               class="contact-button">
+
+               Ouvrir la boutique
+
+            </a>
+
+        </div>
+
+        <div class="contact-card">
+
+            <h2>⚙️ Thingiverse</h2>
+
+            <p>
+                Modèles gratuits,
+                prototypes et projets communautaires.
+            </p>
+
+            <a href="https://www.thingiverse.com/"
+               target="_blank"
+               class="contact-button">
+
+               Voir Thingiverse
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+
+document.querySelectorAll(".copy-mail").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const mail = button.dataset.mail;
+
+        navigator.clipboard.writeText(mail);
+
+        const original = button.innerHTML;
+
+        button.innerHTML = "✔ Adresse copiée";
+
+        setTimeout(() => {
+
+            button.innerHTML = original;
+
+        }, 1800);
+    });
+});
+
+</script>
+
+
+</body>
+</html>
