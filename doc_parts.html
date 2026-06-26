@@ -22,7 +22,7 @@
     width:fit-content;
     max-width:calc(100% - 20px);
 
-    margin:20px auto 40px;
+    margin:5px auto 0px;
     padding:10px;
 
     display:flex;
@@ -73,60 +73,6 @@ html{
     scroll-behavior:smooth;
 }
 
-/* Mobile */
-
-@media(max-width:700px){
-
-    .guide-nav{
-        position:fixed;
-        top:50%;
-        left:0px;
-        transform:translateY(-50%);
-
-        display:flex;
-        flex-direction:column;
-        gap:20px;
-
-        padding:8px 4px;
-
-        background:rgba(15,15,15,0.75);
-        backdrop-filter:blur(12px);
-
-        border:1px solid rgba(255,255,255,0.08);
-        border-radius:12px;
-
-        z-index:1000;
-    }
-
-    .guide-nav a{
-        width:28px;
-        height:auto;
-
-        padding:15px 0;
-
-        display:flex;
-        justify-content:center;
-        align-items:center;
-
-        font-size:11px;
-        font-weight:700;
-
-        text-align:center;
-
-        writing-mode:vertical-rl;
-        text-orientation:upright;
-
-        white-space:nowrap;
-        letter-spacing:1px;
-
-        color:white;
-    }
-
-    .guide-nav a:hover{
-        background:#00ffb3;
-        color:black;
-    }
-}
 
 .back-top{
     position:fixed;
@@ -175,8 +121,20 @@ html{
     border-radius:20px;
     padding:30px;
     margin-bottom:40px;
+
+    transition: transform .2s ease, border-color .2s ease;
 }
 
+.guide-card:hover{
+    transform: translateY(-2px);
+    border-color: rgba(0,255,179,.25);
+}
+
+.guide-card h1{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:10px;
+}
 
 .guide-card h2{
     text-align:center;
@@ -220,6 +178,11 @@ html{
     font-size:18px;
 }
 
+.guide-description em{
+    color:#b5b5b5;
+    font-size:14px;
+}
+
 .parts-list,
 .assembly-list{
     text-align:left;
@@ -228,7 +191,7 @@ html{
 
 .parts-list li,
 .assembly-list li{
-	margin-bottom:8px;
+	margin-bottom:16px;
 }
 
 .ligne-separation{
@@ -239,21 +202,27 @@ html{
 	margin-right: auto;
 	}
 	
-/* SCROLL DOUX */
-
-html{
-    scroll-behavior:smooth;
-}
 
 @media(max-width:700px){
 
-    .guide-card{
-        padding:20px;
-    }
+	.guide-nav{
+		width:auto;
+		max-width:calc(100% - 30px);
+		gap:10px;
+	}
 
-    .guide-card h2{
-        font-size:26px;
-    }
+	.guide-nav a{
+		padding:8px auto;
+	}
+
+	.guide-card{
+		padding:20px;
+	}
+
+	.guide-card h2{
+		font-size:26px;
+	}
+
 }
 
 
@@ -290,7 +259,7 @@ html{
     </div>
 	
     <div class="subtitle">
-        <b>Guide d'assemblage et documentation SH1TN4DE</b>
+        <b>Documentation</b> <b style="color:#00ffb3;">SH1TN4DE</b>
     </div>
 	
 </header>
@@ -298,234 +267,301 @@ html{
 <!-- SOMMAIRE -->
 
 	<div class="guide-nav">
-		<a href="#body">Body</a>
-		<a href="#cap">Capuchon</a>
-		<a href="#bag">Bague</a>
-		<a href="#striker">Striker</a>
-		<a href="#couv">Couvercle</a>
+		<a href="#body">1</a>
+		<a href="#cap">2</a>
+		<a href="#bag">3</a>
+		<a href="#striker">4</a>
+		<a href="#couv">5</a>
+		<a href="#hardware">6</a>
 	</div>
 
 	
 <section class="guide-section">
 
+<!-- SOMMAIRE -->
+
+<div class="guide-card" id="sommaire">
+
+    <h1>Documentation</h1>
+    <h2>Sommaire</h2>
+
+    <div class="guide-description">
+
+        <p class="intro">
+            <em>
+                Page de renseignement du projet <b style="color:#00ffb3;">Sh1tN4de</b>,
+                la grenade d’impact pour Airsoft.
+            </em>
+        </p>
+
+        <h3>1 - <a href="#body" style="color:#00ffb3;text-decoration:none;">Body</a></h3>
+        <p>
+            Le <b>body</b> est l’élément principal de la grenade d’impact.
+            Le filetage à <b>3 entrées</b> à <b>120°</b> permet une ouverture rapide et simple.
+        </p>
+
+        <h3>2 - <a href="#cap" style="color:#00ffb3;text-decoration:none;">Capuchon</a></h3>
+        <p>
+            Le <b>capuchon</b> est l’élément secondaire de la grenade.
+        </p>
+
+        <h3>3 - <a href="#bag" style="color:#00ffb3;text-decoration:none;">Bague</a></h3>
+        <p>
+            La <b>bague</b> permet le passage du mode <b>SAFE</b> à <b>ARMED</b>.
+        </p>
+
+        <h3>4 - <a href="#striker" style="color:#00ffb3;text-decoration:none;">Striker</a></h3>
+        <p>
+            Ensemble de pièces internes responsables de la percussion de l’amorce.
+        </p>
+
+        <h3>5 - <a href="#couv" style="color:#00ffb3;text-decoration:none;">Couvercle</a></h3>
+        <p>
+            Le couvercle verrouille l’ensemble du système.
+        </p>
+
+        <h3>6 - <a href="#hardware" style="color:#00ffb3;text-decoration:none;">Quincaillerie</a></h3>
+        <p>
+            Liste des composants nécessaires à l’assemblage.
+        </p>
+
+    </div>
+</div>
+	
     <!-- Parts -->
 
-    <div class="guide-card" id="body">
-	
-        <h2>Body</h2>
-        <div class="guide-video">
-            <video autoplay loop muted playsinline>
-				<source src="videos/body.mp4" type="video/mp4">
-				Votre navigateur ne supporte pas la vidéo.
-			</video>
-        </div>
-		
-		<div class="guide-description">
+    <!-- BODY -->
 
-			<p class="intro">
-				<em>
-					Le "body" est le l'élement principal de la grenade d'impact. Le pas de vis avec ces 3 entrés de filetage de 120° est concu pour une ouvereture 
-					simple et rapide, facilitant son rechargement.</em>
-					
-					<h3>Fonctionnalité</h3> 
-			    	Il possede 8 sortie sur les cotés et une sortie dessous pour une détonation a 360°.
-					Un emplacement et prévu pour renforcer la zone d'impact du striker a l'interieur du body. Pour ça, il suffit
-					de coller une rondelle M5 d'un diametre exterieur de 18mm maximum.
-					
-					<h3>Skin et texture</h3> 
-					Plusieurs apparence de "body" ont étaient realisé afin de vous proposez la possibilité de créer votre grenade personalisée. 
-					Un configurateur virtuel est également disponible pour visualiser l'apercu du rendu final.<br>
-					Pour en savoir plus, <a href ="" style="color:#00ffb3; text-decoration:none;">rendez vous ici </a>
-					
-					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls, 5 bottom-layers. </em> </h3> 
-					
-			</p>
-			
-		</div>
-		
-		<hr class="ligne-separation">
+<div class="guide-card" id="body">
 
-	</div>
+    <h2>Body</h2>
+
+    <div class="guide-video">
+        <video autoplay loop muted playsinline>
+            <source src="videos/body.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+    </div>
+
+    <div class="guide-description">
+
+        <p class="intro">
+            <em>
+                Le <b>body</b> est l’élément principal de la grenade d’impact.
+                Il constitue la structure centrale du système.
+            </em>
+        </p>
+
+        <h3>Fonctionnalité</h3>
+
+        <p>
+            Le body possède un <b>filetage à 3 entrées à 120°</b>, permettant une ouverture rapide et fluide
+            pour faciliter le rechargement.
+        </p>
+
+        <p>
+            Il dispose de <b>8 sorties latérales</b> et d’une sortie inférieure pour une
+            diffusion à <b>360°</b>.
+        </p>
+
+        <p>
+            Une zone interne permet d’installer un <b>renfort de strike</b> à l’aide d’une
+            <b>rondelle M5 (max 18 mm)</b>.
+        </p>
+
+        <h3>Personnalisation</h3>
+
+        <p>
+            Plusieurs variantes de textures et designs sont disponibles.
+            Un <b>configurateur</b> permet de prévisualiser le rendu final.
+        </p>
+
+        <h3>Impression</h3>
+
+        <p>
+            Paramètres recommandés :
+            <b>Infill 50%+</b>, <b>3+ walls</b>, <b>5 bottom layers</b>.
+        </p>
+
+    </div>
+
+</div>
 	
     <!-- ETAPE 2 -->
 
-    <div class="guide-card" id="cap">
-        <h2>Capuchon (cap)</h2>
-        <div class="guide-video">
-            <video autoplay loop muted playsinline>
-				<source src="videos/cap.mp4" type="video/mp4">
-				Votre navigateur ne supporte pas la vidéo.
-			</video>
-        </div>
-		
-		<div class="guide-description">
+    <!-- CAPUCHON -->
 
-			<p class="intro">
-				<em>
-					Le Capuchon est le l'élement secondaire de la grenade d'impact.</em>
+<div class="guide-card" id="cap">
 
-					<h3>Fonctionnalité</h3> 
-					Il dispose d'une ligne tout autour destiné a etre peinte en rouge, l'objectif est 
-					de permettre a l'utilisateur d'avoir un visuel permettant de dissocier rapidement si la sh1tn4de est sur SAFE ou sur ARMED.
-					Le trou sur cette ligne offre la possibilité de la convertir en un piège filaire.<br>
-					Pour en savoir plus sur la conversion, <a href ="" style="color:#00ffb3; text-decoration:none;">rendez vous ici </a>
-					
-					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls, 5 bottom-layers. </em> </h3> 
-			</p>
-		</div>
-	<hr class="ligne-separation">
-	</div>
+    <h2>Capuchon (cap)</h2>
 
-    <!-- ETAPE 3 -->
-
-    <div class="guide-card" id="bag">
-
-        <h2>Bague</h2>
-        <div class="guide-video">
-            <video autoplay loop muted playsinline>
-				<source src="videos/bag.mp4" type="video/mp4">
-				Votre navigateur ne supporte pas la vidéo.
-			</video>
-        </div>
-		
-		<div class="guide-description">
-
-			<p class="intro">
-				<em>
-					La Bague est l'element d'armement et de securité de la grenade d'impact.</em>
-
-					<h3>Texture et Fonctionnalité</h3> 
-					Plusieurs textures a variation de grip sont disponibles.<br>
-					<br>
-					Pour dévérouiller la grenade, il faut monter la bague jusqu'en buté, puis faire un quart de tour 
-					dans le sens des aiguilles d'une montre.<br>
-					Pour la vérouiller un fois armé il faut refaire un quart de tour dans le sens opposé, puis redescendre la bague.
-					
-					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls, support. </em> </h3> 
-			</p>
-		</div>
-		
-	<hr class="ligne-separation">
+    <div class="guide-video">
+        <video autoplay loop muted playsinline>
+            <source src="videos/cap.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
     </div>
 
-    <!-- ETAPE 4 -->
+    <div class="guide-description">
 
-    <div class="guide-card" id="striker">
+        <p class="intro">
+            <em>
+                Le <b>capuchon</b> est l’élément secondaire de la grenade d’impact.
+            </em>
+        </p>
 
-        <h2>Striker</h2>
-        <div class="guide-video">
-            <video autoplay loop muted playsinline>
-				<source src="videos/striker.mp4" type="video/mp4">
-				Votre navigateur ne supporte pas la vidéo.
-			</video>
-        </div>
+        <h3>Fonctionnalité</h3>
 
-		<div class="guide-description">
+        <p>
+            Le capuchon possède une <b>ligne de repère circulaire</b> pouvant être peinte afin d’indiquer visuellement
+            l’état <b>SAFE / ARMED</b>.
+        </p>
 
-			<p class="intro">
-				<em>
-					Les parties du Striker (interne) sont les pièces nécessaires au
-					fonctionnement du déclencheur. Lors de l'impact, ces pièces sous
-					contrainte se libèrent afin de provoquer la percussion de l'amorce.
-				</em>
-			</p>
-
-			<h3>Pièces à imprimer :<em> Infill 99%, 5 walls, support  pour amorce A et B. </em></h3> 
-			
-			<ul class="parts-list">
-				<b><li>Amorce_A.stl</li>
-				<li>Amorce_B.stl</li>
-				<li>Amorce_C_monocap.stl</li>
-				<li>Guide.stl</li></B>
-			</ul>
-			<em>
-				"<b>Amorce C</b>" disposera à l’avenir d’options permettant d’adapter différents types d’amorces :
-				Ring Cap, 209 Primer, .6 mm à blanc  et anneaux 8 Ring, <b>le tout sous votre propre responsabilité</b>
-			</em>
-
-		</div>
+        <p>
+            Il peut également être utilisé comme base pour une <b>configuration de déclenchement filaire</b>.
+        </p>
 		
-	<hr class="ligne-separation">
+        <h3>Impression</h3>
+
+        <p>
+            Paramètres recommandés : <b>Infill 50%+</b>, <b>3+ walls</b>, <b>3+ bottom-top layers</b>.
+        </p>
+
     </div>
 
-    <!-- ETAPE 5 -->
+</div>
 
-    <div class="guide-card" id="couv">
+<!-- BAGUE -->
 
-        <h2>Couvercle</h2>
-        <div class="guide-video">
-            <video autoplay loop muted playsinline>
-				<source src="videos/couv.mp4" type="video/mp4">
-				Votre navigateur ne supporte pas la vidéo.
-			</video>
-        </div>
-		
-		<div class="guide-description">
+<div class="guide-card" id="bag">
 
-			<p class="intro">
-				<em>
-					Pour fermé le tout, le couvercle.</em>
+    <h2>Bague</h2>
 
-					<h3>Fonctionnalité</h3> 
-					Un simple couvercle a visser sur le capuchon une fois l'assemblage terminé.<br>
-					Elle dispose également d'une ligne tout autour destiné a etre peinte en verte, et d'un texte "SAFE". Si visible, alors la sécurité est mise.<br>
-					Pour en savoir plus sur l'assemblage, <a href ="" style="color:#00ffb3; text-decoration:none;">rendez vous ici </a>
-					
-					<h3>Parametre d'impression testé:<em> Infill 50%+, 3+ walls. </em> </h3> 
-			</p>
-		</div>
-	<hr class="ligne-separation">
+    <div class="guide-video">
+        <video autoplay loop muted playsinline>
+            <source src="videos/bag.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
     </div>
 
-    <!-- ETAPE 6 -->
+    <div class="guide-description">
+
+        <p class="intro">
+            <em>
+                La <b>bague</b> est le système de sécurité et d’armement de la grenade.
+            </em>
+        </p>
+
+        <h3>Fonctionnement</h3>
+
+        <p>
+            Pour désactiver la sécurité, remontez la bague en butée puis effectuez un <b>quart de tour</b>.
+        </p>
+
+        <p>
+            Pour verrouiller, effectuez l’opération inverse puis redescendez la bague.
+        </p>
+
+        <h3>Impression</h3>
+
+        <p>
+            Paramètres recommandés : <b>Infill 50%+</b>, <b>3+ walls</b>, <b>support</b>.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- STRIKER -->
+
+<div class="guide-card" id="striker">
+
+    <h2>Striker</h2>
+
+    <div class="guide-video">
+        <video autoplay loop muted playsinline>
+            <source src="videos/striker.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+    </div>
+
+    <div class="guide-description">
+
+        <p class="intro">
+            <em>
+                Le <b>striker</b> regroupe les pièces internes responsables du déclenchement par impact.
+            </em>
+        </p>
+
+        <h3>Principe de fonctionnement</h3>
+
+        <p>
+            Lors d’un impact, les éléments internes se libèrent afin de permettre la <b>percussion de l’amorce</b>.
+        </p>
+
+        <h3>Pièces à imprimer <em>Infill recommandé : <b>99%</b> pour les pièces internes critiques, 5 walls, support  pour amorce A et B.</em></h3>
+
+      
+            
+        
+
+        <ul class="parts-list">
+            <li><b>Amorce_A.stl</b></li>
+            <li><b>Amorce_B.stl</b></li>
+            <li><b>Amorce_C_monocap.stl</b></li>
+            <li><b>Guide.stl</b></li>
+        </ul>
+
+        <p>
+            Le système <b>Amorce_C</b> pourra évoluer pour supporter différents types d’amorces
+            (<b>Ring Cap</b>, <b>209 Primer</b>, <b>6 mm à blanc</b>) sous la responsabilité de l’utilisateur.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- COUVERCLE -->
+
+<div class="guide-card" id="couv">
+
+    <h2>Couvercle</h2>
+
+    <div class="guide-video">
+        <video autoplay loop muted playsinline>
+            <source src="videos/couv.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la vidéo.
+        </video>
+    </div>
+
+    <div class="guide-description">
+
+        <p class="intro">
+            <em>
+                Le <b>couvercle</b> permet de verrouiller l’ensemble du système.
+            </em>
+        </p>
+
+        <h3>Fonctionnalité</h3>
+
+        <p>
+            Le couvercle se visse sur le capuchon afin de <b>fermer l’assemblage final</b>.
+        </p>
+
+        <p>
+            Il possède une <b>ligne visuelle de sécurité</b> pouvant être peinte en vert et un texte pour indiquer l’état <b>SAFE</b>.
+        </p>
+
+        <h3>Impression</h3>
+
+        <p>
+            Paramètres recommandés : <b>Infill 50%+</b>, <b>3+ walls</b>.
+        </p>
 	
-    <div class="guide-card" id="assemblage">
-
-        <h2>Assemblage</h2>
-
-        <h1>1 - Striker</h1>
-        <div class="guide-video">
-            <video autoplay loop muted playsinline>
-				<source src="videos/striker.mp4" type="video/mp4">
-				Votre navigateur ne supporte pas la vidéo.
-			</video>
-        </div>
-
-		<div class="guide-description">
-
-		<ol class="assembly-list">
-			<li>Insérer une vis <b>M5 x 50 mm</b> dans le <b>guide</b>, puis placer un écrou M5 dans l’emplacement prévu. Ajouter une goutte de frein filet, puis serrer.</li>
-			<li>Insérer <b>la vis et le guide</b> dans le <b>Capuchon.stl</b> jusqu’à butée.</li>
-			<li>Placer le ressort dans l’emplacement du <b>Capuchon.stl</b>, puis visser un écrou M5 jusqu’à venir en contact avec le ressort.</li>
-			<li>Insérer un écrou dans <b>Amorce_A.stl</b>, comprimer le ressort, puis visser jusqu’au contact entre les deux écrous.</li>
-			<li>Insérer une amorce dans <b>Amorce_C</b>, la glisser dans <b>Amorce_B</b>, puis clipser l’ensemble dans <b>Amorce_A.stl</b>.</li>
-		</ol>
-
-		</div>
 		
-		<hr class="ligne-separation">
-
-<h1>2 - Striker</h1>
-        <div class="guide-video">
-            <video autoplay loop muted playsinline>
-				<source src="videos/striker.mp4" type="video/mp4">
-				Votre navigateur ne supporte pas la vidéo.
-			</video>
-        </div>
-
-		<div class="guide-description">
-
-		<ol class="assembly-list">
-			<li>Insérer une vis <b>M5 x 50 mm</b> dans le <b>guide</b>, puis placer un écrou M5 dans l’emplacement prévu. Ajouter une goutte de frein filet, puis serrer.</li>
-			<li>Insérer <b>la vis et le guide</b> dans le <b>Capuchon.stl</b> jusqu’à butée.</li>
-			<li>Placer le ressort dans l’emplacement du <b>Capuchon.stl</b>, puis visser un écrou M5 jusqu’à venir en contact avec le ressort.</li>
-			<li>Insérer un écrou dans <b>Amorce_A.stl</b>, comprimer le ressort, puis visser jusqu’au contact entre les deux écrous.</li>
-			<li>Insérer une amorce dans <b>Amorce_C</b>, la glisser dans <b>Amorce_B</b>, puis clipser l’ensemble dans <b>Amorce_A.stl</b>.</li>
-		</ol>
-
-		</div>
-
     </div>
+
+</div>
 
 </section>
 
