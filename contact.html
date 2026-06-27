@@ -2,17 +2,105 @@
 <html lang="fr">
 
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Contact - xTrude</title>
-
+<title>Info & Contact - xTrude</title>
 <link rel="icon" href="img/logo.png">
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+.intro {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.intro h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+	text-align:center;
+	color:#00ffb3;
+}
+
+.intro p {
+    line-height: 1.7;
+    margin-bottom: 16px;
+    color: #d8d8d8;
+}
+
+.intro ul {
+    margin: 15px 0 20px 20px;
+    line-height: 1.8;
+    color: #d8d8d8;
+}
+
+.intro strong {
+    color:#00ffb3;
+}
+
+.intro-text{
+    text-align:center;
+    font-size:1.05rem;
+    line-height:1.8;
+    color:#d7d7d7;
+    margin-bottom:35px;
+}
+
+.info-box{
+    margin-top:30px;
+    padding:25px 30px;
+    border-left:4px solid #00ffb3;
+    background:rgba(255,255,255,.04);
+    border-radius:12px;
+}
+
+.info-box h3{
+    margin:0 0 15px;
+    font-size:1.2rem;
+    color:#00ffb3;
+}
+
+.info-box p{
+    margin:0 0 12px;
+    line-height:1.8;
+    color:#d7d7d7;	
+}
+
+.small-text{
+    font-size:.92rem;
+    color:#a8a8a8;
+    font-style:italic;
+}
+
+.info-box strong{
+    color:#fff;
+    font-weight:700;
+}
+
+.card-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.card-title span{
+    font-size:1.4rem;
+    font-weight:700;
+    color:#00ffb3;
+}
+
+.mini-logo{
+    width:36px;
+    height:36px;
+}
+	
+</style>
 
 </head>
 
@@ -34,6 +122,56 @@
 
 </header>
 
+<section class="intro">
+
+    <h2>Bienvenue</h2>
+
+    <p>
+        Bienvenue sur ma page dédiée à mes projets d'impression 3D.
+        Vous y trouverez les modèles et designs que je conçois, ainsi que
+        des documentations, guides d'utilisation et informations techniques
+        pour accompagner certains projets.
+    </p>
+
+    <p>
+        Ce site regroupe plusieurs univers :
+    </p>
+
+    <ul>
+        <li>
+            <strong>Splash</strong> : des projets et accessoires dédiés au
+            wingfoil, aux sports nautiques et à diverses activités aquatiques.
+        </li>
+
+        <li>
+            <strong>Pr1ntSh1t</strong> : des modèles et projets destinés à
+            l'airsoft, principalement actif autour de mon projet
+            <strong>Sh1tN4de</strong>.
+        </li>
+    </ul>
+
+	<div class="info-box">
+
+		<h3>💬 Une question ?</h3>
+
+		<p>
+			Une question sur un projet, une idée à partager,
+			un bug à signaler ou une suggestion pour améliorer le site ou un modèle ?
+			<strong>N'hésitez pas à me contacter par e-mail</strong>,
+			l'adresse est disponible juste en dessous.
+		</p>
+
+		<p class="small-text">
+			Tous les projets présentés ici sont développés
+			<strong>sur mon temps libre</strong>, en dehors de mon activité
+			professionnelle. Je réponds à tous les messages, mais un délai
+			de quelques jours est parfois nécessaire. Merci pour votre compréhension !
+		</p>
+
+	</div>
+
+</section>
+
 <section class="contact-page">
 
     <div class="section-title">
@@ -41,11 +179,7 @@
 
         <div class="section-head">
 
-            <span>Contact</span>
-
-            <div class="section-meta">
-                <span>Support • Questions • Personnalisation</span>
-            </div>
+            <span>Contact & Réseaux</span>
 
         </div>
     </div>
@@ -57,10 +191,7 @@
             <h2>📧 Contact principal</h2>
 
             <p>
-                Pour toutes recommandations, questions,
-                demandes de modif /
-                personnalisations,
-                vous pouvez me contacter directement par mail.
+			Pour toute demande ou renseignement, contactez-moi directement par e-mail.
             </p>
 
 			<button class="contact-button copy-mail"
@@ -90,21 +221,42 @@
             </a>
 
         </div>
+	</div>
+</section>
+		
+<section class="contact-page">
 
+	<div class="section-title">
+        <div class="bar"></div>
+
+        <div class="section-head">
+
+            <span>En savoir plus</span>
+
+        </div>
+    </div>
+		
+		
+		
+	<div class="contact-container">
+	
         <div class="contact-card">
 
-            <h2>🛒 Boutique</h2>
+            <div class="card-title">
+				<img src="img/sp-logo.png" class="mini-logo" alt="">
+				<span>Splash</span>
+			</div>
 
             <p>
-                STL premium, packs,
-                accessoires et futures releases.
+			Listes des modèles, gallerie d'images et documentation 
+			concernant les modèles Splash
             </p>
 
             <a href="https://cults3d.com/fr/utilisateurs/xTrude"
                target="_blank"
                class="contact-button">
 
-               Ouvrir la boutique
+               Voir plus
 
             </a>
 
@@ -112,18 +264,20 @@
 
         <div class="contact-card">
 
-            <h2>⚙️ Thingiverse</h2>
+            <div class="card-title">
+				<img src="img/ps-logo.png" class="mini-logo" alt="">
+				<span>Pr1ntSh1t</span>
+			</div>
 
             <p>
-                Modèles gratuits,
-                prototypes et projets communautaires.
+                Documents et informations relative aux modèles Pr1ntSh1t.
             </p>
 
             <a href="https://www.thingiverse.com/"
                target="_blank"
                class="contact-button">
 
-               Voir Thingiverse
+               Voir plus
 
             </a>
 

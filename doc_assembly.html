@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>xTrude - Sh1tN4de - Assemblage</title>
+<title>Sh1tN4de - Assemblage</title>
 
 <link rel="icon" href="img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -150,6 +150,46 @@ html{
 	margin:25px auto 20px;
 }
 
+.guide-end-button{
+    display:flex;
+    justify-content:center;
+    margin:60px 0 20px;
+}
+
+.big-theme-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:16px 28px;
+
+    background:rgba(0,255,179,0.08);
+    border:1px solid rgba(0,255,179,0.35);
+
+    color:#00ffb3;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:700;
+
+    border-radius:14px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 8px 25px rgba(0,255,179,0.15);
+
+    transition:0.25s;
+}
+
+.big-theme-button:hover{
+    background:#00ffb3;
+    color:#000;
+
+    transform:translateY(-3px) scale(1.02);
+
+    box-shadow:0 12px 35px rgba(0,255,179,0.35);
+}
+
 .green-link{
 	color:#00ffb3;
 	text-decoration:none;
@@ -275,12 +315,12 @@ html{
 			<h3>
 				<a href="#checkup" class="green-link">Check-Up</a>
 			</h3>
-			<p>Vérification des pièces avant le montage.</p>
+			<p>Vérification avant montage.</p>
 
 			<h3>
 				<a href="#assembly" class="green-link">Assemblage</a>
 			</h3>
-			<p>Assemblage des différentes pièces de la grenade.</p>
+			<p>Assemblage des différentes pièces.</p>
 
 			<hr class="ligne-separation">
 
@@ -297,9 +337,9 @@ html{
 			<p>Réglages permettant d'obtenir un déclenchement fiable.</p>
 
 			<h3>
-				<a href="#amorce" class="green-link">Chargement et rechargement de l'amorce</a>
+				<a href="#amorce" class="green-link">Chargement amorce - Mode SAFE/ARMED</a>
 			</h3>
-			<p>Chargement des différents types d'amorces compatibles.</p>
+			<p>Mettre la Sh1tN4de en fonction.</p>
 
 			<h3>
 				<a href="#troubleshooting" class="green-link">Troubleshooting</a>
@@ -333,13 +373,13 @@ html{
 			<h3>Pièces imprimées</h3>
 
 			<ul class="parts-list">
-				<li><b>Body</b> <em>Body.stl (à choisir avec le <a href="#body" class="green-link"><b>CONFIGURATOR</b></a>)</em></li>
+				<li><b>Body</b> <em>Body.stl (plusieurs stl dispo a voir avec le <a href="https://sh1tn4de-configurator.pages.dev/" class="green-link"><b>CONFIGURATOR</b></a>)</em></li>
 
 				<li><b>Striker Parts</b> <em>Amorce_A.stl, Amorce_B.stl, Amorce_C.stl, Guide.stl</em></li>
 
 				<li><b>Capuchon</b> <em>Cap.stl</em></li>
 
-				<li><b>Bague</b> <em>Bag.stl (à choisir avec le <a href="#body" class="green-link"><b>CONFIGURATOR</b></a>)</em></li>
+				<li><b>Bague</b> <em>Bag.stl (plusieurs stl dispo a voir avec le <a href="https://sh1tn4de-configurator.pages.dev/" class="green-link"><b>CONFIGURATOR</b></a>)</em></li>
 
 				<li><b>Couvercle</b> <em>Couv.stl</em></li>
 			</ul>
@@ -355,7 +395,7 @@ html{
 
 				<li>
 					<b>x2 Rondelles M5</b>
-					<em>Diamètre maximal de 18 mm. Une rondelle est optionnelle pour renforcer le <a href="#body" class="green-link"><b>BODY</b></a>.</em>
+					<em> Rondelle M5 avec diametre maximum de 18mm - Optionnelles</em></li>
 				</li>
 
 				<li><b>x3 Écrous M5</b></li>
@@ -387,21 +427,21 @@ html{
 
 	<p>
 
-    Le modèle est conçu pour une imprimante avec une <b>tolérance d’environ 0,1 mm</b>.
-    La <b>qualité de votre imprimante</b> est essentielle pour le bon fonctionnement.
+    Le modèle est conçu pour une imprimante avec une <b>tolérance de 0,1 mm max</b>.
+    La <b>qualité d'impression de votre imprimante</b> est essentielle pour le bon fonctionnement.
     Effectuez toujours un <b>bed leveling</b> avant impression des <b>STL</b>.
 	</p>
 
 	<p>
-		La clearance (jeu entre les pièces) doit être d’environ 0,1 mm maximum.
-		Un mauvais réglage peut entraîner trop de jeu ou un blocage des pièces.
+		<b>La clearance</b> (jeu entre les pièces) doit donc être 0,1 au mm maximum.
+		Un mauvais réglage peut entraîner trop de jeu ou à l'inverse, un blocage des pièces.
 	</p>
 
 	<h3>Qualité d’impression</h3>
 
 	<p>
 		Vérifiez l’absence de bavures dans les orifices, de warping ou de défauts
-		pouvant gêner le glissement des pièces.
+		pouvant gêner le glissement des pièces et leurs fonctionnement.
 	</p>
 
 </div>
@@ -415,7 +455,7 @@ html{
 	<ol class="assembly-list">
 
 		<li>
-			Insérez une vis <b>M5 × 50 mm</b> dans le <b>guide</b>, ajoutez un <b>écrou M5</b>, appliquez du <b>frein filet</b> puis serrez.
+			Insérez la vis <b>M5 × 50 mm</b> dans le <b>guide</b>, ajoutez un <b>écrou M5</b>, appliquez du <b>frein filet</b><em> - Optionnel - </em>puis serrez.
 		</li>
 
 		<div class="guide-video">
@@ -424,12 +464,12 @@ html{
 
 		<li>
 			Insérez l’ensemble <b>guide + vis</b> dans le <b>capuchon</b>, placez le <b>ressort</b>,
-			puis vissez un <b>écrou</b> jusqu’au contact avec le ressort.
+			puis vissez un autre <b>écrou</b> jusqu’a la hauteur du ressort environ.
 		</li>
 
 		<p>
-			Insérez un <b>écrou</b> dans <b>Amorce_A</b> (après retrait des supports), comprimez légèrement
-			le <b>ressort</b> si nécessaire, puis ajustez jusqu’au <b>contact</b>.
+			Insérez le dernier <b>écrou</b> dans <b>Amorce_A</b> (après retrait des supports), comprimez légèrement
+			le <b>ressort</b> si nécessaire, puis vissez jusqu’au <b>contact</b>.
 		</p><br>
 
 		<div class="guide-video">
@@ -437,7 +477,8 @@ html{
 		</div>
 
 		<li>
-			Vissez le <b>couvercle</b> en alignant les <b>axes</b>. Le <b>capuchon</b> doit tourner librement
+			Mettre la <b>bague</b> dans le <b>couvercle</b>, <b>l'encoche</b> de la bague vers le trou du capuchon.
+			Vissez le <b>couvercle</b> en alignant les <b>axes</b> des pré-trous. Le <b>capuchon</b> doit tourner librement
 			tout en gardant une <b>résistance contrôlée</b>.
 		</li>
 
@@ -446,6 +487,10 @@ html{
 		</div>
 
 	</ol>
+
+	<h1>
+		<a href="#strikerconf" class="green-link">→ Test déclenchement ←</a>
+	</h1>
 
 	<h1>
 		<a href="#amorce" class="green-link">→ Charger l’amorce ←</a>
@@ -481,8 +526,7 @@ html{
     <h3>Consignes de sécurité</h3>
 
 <p>
-    Avant chaque utilisation, vérifiez que la grenade est en <b>bon état</b> et ne présente
-    aucun <b>dommage</b> ou <b>pièce desserrée</b>.<br>
+    Avant chaque utilisation, vérifiez que la grenade est en <b>bon état</b> et ne présente aucun <b>dommage</b>.<br>
     Une <b>détonation incontrôlée</b> peut survenir, notamment si la grenade est <b>mal configurée</b>.
 </p>
 
@@ -490,9 +534,9 @@ html{
         <li>Le port de gants est fortement recommandé.</li>
         <li>Ne jamais lancer volontairement la grenade directement sur une personne.</li>
         <li>Ne pas lancers violemments ou en cloche.</li>
-        <li>Ne pas utiliser la grenade en intérieur si la détonation est trop puissante.</li>
+        <li>Ne pas utiliser la grenade en intérieur si la détonation est trop puissante. <em>( Amorce 209, .6mm a blanc )</em></li>
         <li>Les amorces peuvent produire des étincelles lors de la percussion. Ne pas utiliser la grenade sur un terrain sec ou à proximité de matières inflammables.</li>
-        <li>Ramasser les résidus d'amorce et autres déchets après chaque utilisation.</li>
+        <li>Ramasser les résidus d'amorce après chaque utilisation.</li>
     </ul>
 
 	<h3>Avertissement</h3>
@@ -531,30 +575,60 @@ html{
 	<h2>Réglage de la sensibilité du striker</h2>
 
 	<div class="guide-description">
-
-		<p class="intro">
+	
+	    <p class="intro">
 			<em>Ce réglage permet d’ajuster la sensibilité de déclenchement à l’impact.</em>
 		</p>
 
-		<h3>Plus de sensibilité</h3>
+    <h3>Test de la sensibilité</h3>
 
-		<p>
-			Vissez la pièce <b>Amorce_A</b> afin d’augmenter la <b>compression du ressort</b>.
-			Cela rend le déclenchement <b>plus sensible à l’impact</b>.
-		</p>
+    <p>
+        Avant tout, il est important de faire un ou plusieurs tests à vide afin de trouver le bon réglage pour votre grenade.
+    </p>
 
-		<h3>Moins de sensibilité</h3>
+    <p>
+        Pour cela, utilisez uniquement le <b>capuchon</b> et l’ensemble des éléments montés lors de l’assemblage
+        (<a href="#assembly" class="green-link">voir section Assemblage</a>).
+    </p>
 
-		<p>
-			Dévissez la pièce <b>Amorce_A</b> afin de réduire la <b>compression du ressort</b>.
-			Cela rend le déclenchement <b>moins sensible à l’impact</b>.
-		</p>
+    <p>
+        Armez la grenade de la même façon que dans la première vidéo du chapitre
+        <a href="#amorce" class="green-link">Chargement amorce - Mode SAFE/ARMED</a>, puis verrouillez et déverrouillez le système.
+        <b>Attention</b> : un déclenchement peut se produire à ce moment-là, manipulez avec précaution.
+        Si la grenade se déclenche direct, elle est <b>trop sensible</b>. <em>Voir "moins de sensibilité" en dessous</em>. Sinon, continuez le test.
+    </p>
 
-	</div>
+    <p>
+        Une fois la grenade armée et sous tension, placez-la à environ <b>40 cm</b> du sol et laissez-la tomber sans impulsion.
+        Le déclenchement devrait se produire. Si ce n’est pas le cas, elle n’est <b>pas assez sensible</b>. 
+    </p>
+
+    <p>
+        Voir réglages ci-dessous :
+    </p>
+
+    <h3>Plus de sensibilité</h3>
+
+    <p>
+        Visser la pièce <b>Amorce_A</b> afin d’augmenter la <b>compression du ressort</b>.
+        Cela rend le déclenchement <b>plus sensible à l’impact</b>. <br>
+		<em><b>Attention :</b> ne pas trop visser la pièce, la tige filetée ne doit pas trop sortir,
+    ce qui pourrait empêcher la mise en place de l’amorce.</em>
+    </p>
+
+    <h3>Moins de sensibilité</h3>
+
+    <p>
+        Dévisser la pièce <b>Amorce_A</b> afin de réduire la <b>compression du ressort</b>.
+        Cela rend le déclenchement <b>moins sensible à l’impact</b>.<br>
+		<em><b>Attention :</b> ne pas trop dévisser la pièce, la tige filetée doit etre minimum <b>a fleur</b> de l'écrou m5 de la piece <b>Amorce_A</b></em>
+    </p>
+
+</div>
 
 	<hr class="ligne-separation" id="amorce">
 
-	<h2>Chargement et rechargement de l’amorce</h2>
+	<h2>Chargement amorce - Mode SAFE/ARMED</h2>
 
 	<div class="guide-description">
 
@@ -565,8 +639,8 @@ html{
 		<ol class="assembly-list">
 
 			<li>
-				Passez la grenade en mode <b>ARMÉ</b>. Positionnez la <b>bague</b> vers le haut à <b>45°</b>,
-				<b>comprimez le ressort</b> puis <b>verrouillez le système</b>.
+				Pour <b>vérouiller</b> la grenade, passez la grenade en mode <b>ARMÉ</b> en positionnant la <b>bague</b> vers le haut et tourner à <b>45°</b> <em>("SAFE" caché)</em>.
+				<b>Comprimez le ressort au max</b> puis <b>verrouillez le système</b> en reproduisant les mouvements de la vidéeo ci-dessous. <em>("SAFE" visible, la grenade est sécurisée.)</em>
 			</li>
 
 			<div class="guide-video">
@@ -576,7 +650,7 @@ html{
 			</div>
 
 			<li>
-				Placez l’<b>amorce</b> dans <b>Amorce_C</b>, puis insérez <b>Amorce_C</b> dans <b>Amorce_B</b>.
+				Placez l’<b>amorce</b> dans <b>Amorce_C</b>, puis insérez <b>Amorce_C</b> dans <b>Amorce_B</b> par le dessus.
 			</li>
 
 			<div class="guide-video">
@@ -585,7 +659,7 @@ html{
 
 			<li>
 				Lors de l’assemblage dans <b>Amorce_A</b>, vérifiez que l’<b>amorce</b> reste parfaitement
-				<b>alignée</b> et <b>immobile</b>.
+				<b>alignée</b> et <b>immobile</b>.<br>Il suffit de <b>clipser</b> les deux parties ensemble.
 			</li>
 
 			<div class="guide-video">
@@ -593,7 +667,9 @@ html{
 			</div>
 
 			<li>
-				Une fois assemblé, vissez le <b>body</b>, retirez la <b>sécurité</b> et la grenade est <b>prête</b>.
+				Une fois assemblé, vissez le <b>body</b>, retirez la <b>sécurité</b> en reproduisant le mouvement inverse de la première vidéo :
+				<em>(passez la grenade en mode <b>ARMÉ</b> en positionnant la <b>bague</b> vers le haut et tourner à <b>45°</b>) </em>.<br> 
+				La grenade est <b>prête à être lancé</b>.
 			</li>
 
 			<div class="guide-video">
@@ -604,9 +680,90 @@ html{
 
 	</div>
 
-	<hr class="ligne-separation">
+	<hr class="ligne-separation" id="troubleshooting">
 
+	<h2>Troubleshooting</h2>
+
+	<div class="guide-description">
+
+		<p class="intro">
+			<em>Problèmes et solutions possible.</em>
+		</p>
+
+		<h3>Les pièces ne s'assemblent pas correctement</h3>
+
+		<p>
+			Si les pièces <b>ne rentrent pas les unes dans les autres</b> ou présentent au contraire <b>trop de jeu</b>,
+			le problème provient surement de la <b>précision d'impression</b>.
+		</p>
+
+		<p>
+			La conception a été réalisée et testée sur mes deux imprimantes avec une <b>tolérance maximale de 0,1 mm</b>
+			(une moyenne proche de <b>0,0 mm</b>). Vérifiez les paramètres de votre slicer
+			(calibration de l'extrusion, compensation XY, débit, etc.) afin d'obtenir des dimensions plus précises.
+		</p>
+
+		<h3>La grenade se déclenche toute seule</h3>
+
+		<p>
+			La sensibilité du système de percussion est probablement trop élevée.
+			Il est recommandé d'ajuster le réglage en suivant la section :
+			<a href="#strikerconf" class="green-link"><b>Réglage de la sensibilité du striker</b></a>.<br>
+			Si le problème persiste, il faut vérifier que « Guide.stl » soit correctement imprimé et qu'il ne soit pas trop
+			libre dans le capuchon (trop de jeu).
+		</p>
+
+		<h3>La grenade ne se déclenche pas lors de l'impact</h3>
+
+		<p>
+			Le système nécessite un <b>impact suffisamment franc</b> pour se déclencher. Si la grenade tombe dans de
+			<b>hautes herbes</b>, un <b>tas de feuilles</b> ou toute autre surface molle,
+			le déclenchement peut ne pas se produire.
+		</p>
+
+		<p>
+			Il est conseillé de <b>viser une surface plus rigide</b>. <em>(Tronc d'arbre, palette, zone dégagée...)</em>.<br>
+			Si le problème persiste, augmentez légèrement la sensibilité en consultant la section :
+			<a href="#strikerconf" class="green-link"><b>Réglage de la sensibilité du striker</b> "Test de sensibilité"</a>.
+		</p>
+
+		<h3>Le rechargement est bloqué</h3>
+
+		<p>
+			Avant toute opération de rechargement, assurez-vous de repasser la grenade en mode
+			<b>ARMÉ</b> en relevant la bague puis en effectuant un <b>quart de tour dans le sens
+			des aiguilles d'une montre</b>. Une légère résistance doit être ressentie lorsque le
+			système est correctement réglé.
+		</p>
+
+		<p>
+			Vous pouvez ensuite reprendre la procédure décrite dans
+			<a href="#amorce" class="green-link"><b>Chargement amorce - Mode SAFE/ARMED</b></a>.
+		</p>
+
+		<p>
+			Si la grenade refuse toujours de se verrouiller, vérifiez que la <b>vis M5x50</b>
+			utilisée possède une <b>tête de 10 mm maximum</b>. Le problème peut également provenir
+			d'un défaut d'impression ou d'un mauvais réglage de votre imprimante.
+		</p>
+
+		<h3>Vous avez rencontré un autre problème ?</h3>
+
+		<p>
+			N'hésitez pas à me faire part de tout problème rencontré afin d'enrichir cette section
+			et d'améliorer la documentation. Vous pouvez me contacter à l'adresse suivante :
+			<b class="green-link">xtrude3d@proton.me</b>
+		</p>
+
+	</div>
+	
 </div>
+
+	<div class="guide-end-button">
+		<a href="doc_parts.html" class="big-theme-button">
+			Documentation - Parts
+		</a>
+	</div>
 
 </section>
 

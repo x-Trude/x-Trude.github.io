@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>xTrude - Sh1tN4de Parts - Documentation</title>
+<title>Sh1tN4de - Documentation</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 <link rel="icon" href="img/logo.png">
 <link rel="stylesheet" href="style.css">
@@ -150,15 +150,13 @@ html{
     margin-bottom:25px;
 }
 
+.guide-video img,
 .guide-video video{
-    width:100%;
-    max-width:720px;
-
-    border-radius:18px;
-
-    border:1px solid rgba(255,255,255,0.08);
-
-    background:black;
+	width:100%;
+	max-width:720px;
+	background:#000;
+	border:1px solid rgba(255,255,255,.08);
+	border-radius:18px;
 }
 
 .guide-description{
@@ -202,6 +200,45 @@ html{
 	margin-right: auto;
 	}
 	
+.guide-end-button{
+    display:flex;
+    justify-content:center;
+    margin:60px 0 20px;
+}
+
+.big-theme-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:16px 28px;
+
+    background:rgba(0,255,179,0.08);
+    border:1px solid rgba(0,255,179,0.35);
+
+    color:#00ffb3;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:700;
+
+    border-radius:14px;
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 8px 25px rgba(0,255,179,0.15);
+
+    transition:0.25s;
+}
+
+.big-theme-button:hover{
+    background:#00ffb3;
+    color:#000;
+
+    transform:translateY(-3px) scale(1.02);
+
+    box-shadow:0 12px 35px rgba(0,255,179,0.35);
+}
 
 @media(max-width:700px){
 
@@ -413,12 +450,14 @@ html{
         <h3>Fonctionnalité</h3>
 
         <p>
-            Le capuchon possède une <b>ligne de repère circulaire</b> pouvant être peinte afin d’indiquer visuellement
-            l’état <b>SAFE / ARMED</b>.
+            Le capuchon possède une <b>ligne de repère circulaire</b> pouvant être peinte ou imprimé en rouge, afin d’indiquer visuellement
+            l’état <b>ARMED</b>.
         </p>
 
         <p>
-            Il peut également être utilisé comme base pour une <b>configuration de déclenchement filaire</b>.
+			Un trou sur cette ligne peut être utilisé pour une <b>configuration à déclenchement filaire</b>.
+			Pour cela, il suffit d'y insérer <b>une goupille</b> à la dimension appropriée.
+			Une fois la goupille <b>tirée</b>, le <b>système de déclenchement</b> est relâché.
         </p>
 		
         <h3>Impression</h3>
@@ -499,7 +538,7 @@ html{
             Lors d’un impact, les éléments internes se libèrent afin de permettre la <b>percussion de l’amorce</b>.
         </p>
 
-        <h3>Pièces à imprimer <em>Infill recommandé : <b>99%</b> pour les pièces internes critiques, 5 walls, support  pour amorce A et B.</em></h3>
+        <h3>Pièces à imprimer </h3>
 
       
             
@@ -515,6 +554,12 @@ html{
         <p>
             Le système <b>Amorce_C</b> pourra évoluer pour supporter différents types d’amorces
             (<b>Ring Cap</b>, <b>209 Primer</b>, <b>6 mm à blanc</b>) sous la responsabilité de l’utilisateur.
+        </p>
+		
+		<h3>Impression</h3>
+
+        <p>
+            Paramètres recommandés : <b>Infill 99%+</b>, <b>5+ walls</b>, <b>support</b>.
         </p>
 
     </div>
@@ -561,6 +606,54 @@ html{
 		
     </div>
 
+</div>
+
+<!-- QUINCAILLERIE -->
+
+<div class="guide-card" id="hardware">
+
+    <h2>Quincaillerie</h2>
+
+    <div class="guide-video">
+			<img src="printshit-img/hardware.jpg" alt="Assembly step 1">
+		</div>
+
+    <div class="guide-description">
+
+        <h3>Liste :</h3>
+
+			<ul class="parts-list">
+
+				<li>
+					<b>x1 Vis M5 × 50 mm</b>
+					<em>Tête fraisée, diamètre maximal de 10 mm.</em>
+				</li>
+
+				<li>
+					<b>x2 Rondelles M5</b>
+					<em>Diamètre maximal de 18 mm. Elles sont <b>Optionnelles</b></a> pour le renforcement des pièces.</em>
+				</li>
+
+				<li><b>x3 Écrous M5</b></li>
+
+				<li>
+					<b>x1 Ressort 1.2 × 14 × 25</b>
+					<em>Diamètre du fil × diamètre extérieur × longueur.</em>
+				</li>
+
+				<li><b>x2 Petites vis</b></li>
+
+			</ul>
+	
+		
+    </div>
+
+</div>
+
+<div class="guide-end-button">
+    <a href="doc_assembly.html" class="big-theme-button">
+        Assemblage et Mode d'emploi 
+    </a>
 </div>
 
 </section>
