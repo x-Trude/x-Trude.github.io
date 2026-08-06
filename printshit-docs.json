@@ -1,0 +1,117 @@
+{
+  "products": [
+  
+    {
+      "id": "Assemblage",
+
+      "title": "Documentation d'assemblage",
+
+      "thumbnail": "printshit-img/assemblage.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce système permet de bloquer les T-Nuts dans les rails de foil..."
+        },
+        {
+          "type": "image",
+          "src": "printshit-img/sprus.jpg"
+        },
+        {
+          "type": "title",
+          "text": "Utilisation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compatible M6 et M8, installation simple sans outil spécifique."
+        },
+        {
+          "type": "gallery",
+          "images": [
+            "printshit-img/sprus.jpg",
+            "printshit-img/detail1.jpg"
+          ]
+        },
+        {
+          "type": "link",
+          "text": "Voir sur Cults3D",
+          "url": "https://cults3d.com/fr/..."
+        }
+      ]
+    },
+
+    {
+      "id": "gopro-mount",
+
+      "title": "Wing Camera Support",
+
+      "thumbnail": "printshit-img/gpmount.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Support caméra pour wingfoil compatible GoPro, DJI et 360."
+        },
+        {
+          "type": "video",
+          "src": "videos/demo.mp4"
+        }
+      ]
+    },
+
+    {
+      "id": "gopro-mount",
+
+      "title": "Wing Camera Support",
+
+      "thumbnail": "printshit-img/gpmount.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Support caméra pour wingfoil compatible GoPro, DJI et 360."
+        },
+        {
+          "type": "video",
+          "src": "videos/demo.mp4"
+        }
+      ]
+    },
+
+    {
+      "id": "gopro-mount",
+
+      "title": "Wing Camera Support",
+
+      "thumbnail": "printshit-img/gpmount.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Support caméra pour wingfoil compatible GoPro, DJI et 360."
+        },
+        {
+          "type": "video",
+          "src": "videos/demo.mp4"
+        }
+      ]
+    }	
+	
+  ]
+}

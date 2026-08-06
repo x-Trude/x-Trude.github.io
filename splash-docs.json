@@ -1,0 +1,214 @@
+{
+  "products": [
+  
+    {
+      "id": "db-miniscrew",
+
+      "title": "Double screw - Mini",
+
+      "thumbnail": "splash-img/dbscrew.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Mini Tournevis de backup pour éviter un aller-retour à la plage afin de ressérer le foil"	
+        },
+        {
+          "type": "image",
+          "src": "splash-img/dbscrew.jpg"
+        },
+		{
+          "type": "title",
+          "text": "Utilisation et description produit"
+        },
+			{
+			  "type": "paragraph",
+			  "text": "<b>Compatible avec les embouts 1/4 universel</b>."
+			},
+			{
+			  "type": "paragraph",
+			  "text": "<b>30×44 mm x 10mm</b> d'épaisseur : Ne prend pas de place pour être emporté partout."
+			},
+			{
+			  "type": "paragraph",
+			  "text": "Mini tournevis de secours pour resserrer le foil n'importe où."
+			},
+			{
+			  "type": "paragraph",
+			  "text": "L'empreinte est en plastique. Ne pas forcer le serrage. Afin de renforcer l'empreinte, un petit trou a été ajouté de chaque côté afin de permettre l'insertion d'une tige métallique (clou, rivet, goupille, axe ou tige filetée)."
+			},
+			{
+			  "type": "paragraph",
+			  "text": "Un embout Torx T30 est intégré au modèle afin de <b>prévisser</b> les vis plus rapidement."
+			},
+        {
+          "type": "title",
+          "text": "Gallerie d'images"
+        },
+        {
+          "type": "gallery",	
+          "images": [
+            "splash-img/dbscrew (1).jpg",
+			"splash-img/dbscrew (2).jpg",
+			"splash-img/dbscrew (3).jpg",
+			"splash-img/dbscrew (4).jpg"
+          ]
+        },	
+        {
+          "type": "link",
+          "text": "Voir sur Cults3D",
+          "url": "https://cults3d.com/fr/..."
+        }
+      ]
+    },
+	
+	{
+      "id": "tnuts",
+
+      "title": "Rail Blocker T-Nuts M6/M8",
+
+      "thumbnail": "splash-img/sprus.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Bloqueur pour maintenir vos écrous T-Nuts à un entraxe fixe de 165 mm, correspondant à l'entraxe standard le plus répandu sur les platines (top plates) de foil."
+		},
+        {
+          "type": "image",
+          "src": "splash-img/sprus.jpg"
+        },
+        {
+          "type": "title",
+          "text": "Utilisation"
+        },
+        {
+          "type": "paragraph",
+          "text": "<b>Compatible</b> T-nuts M6 et M8, et <b>rail mono entrée</b>."
+        },
+		{
+          "type": "paragraph",
+          "text": "Installation simple et sans outil."
+        },
+		{
+		  "type": "paragraph",
+          "text": "Fini la perte de temps à repositionner les écrous dans les rails avant chaque session. Une fois installés, les T-Nuts restent correctement espacés et prêts à recevoir votre foil."
+        },
+        {
+          "type": "title",
+          "text": "Gallerie d'images"
+        },
+        {
+          "type": "gallery",
+          "images": [
+            "splash-img/sprus1.jpg",
+            "splash-img/sprus2.jpg",
+			"splash-img/sprus3.jpg",
+            "splash-img/sprus3.jpg"
+          ]
+        },
+        {
+          "type": "link",
+          "text": "Voir sur Cults3D",
+          "url": "https://cults3d.com/fr/..."
+        }
+      ]
+    },
+	
+	{
+      "id": "tnuts",
+
+      "title": "Cale de rake - adjustable shim pour platine gong v1",
+
+      "thumbnail": "splash-img/rake.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Ce système permet de corriger l'angle de votre foil en vu d'améliorer les performances."
+        },
+        {
+          "type": "image",
+          "src": "splash-img/rake.jpg"
+        },
+        {
+          "type": "title",
+          "text": "Utilisation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Compatible M6 et M8, installation simple sans outil spécifique."
+        },
+        {
+          "type": "title",
+          "text": "Gallerie d'images"
+        },		
+        {
+          "type": "gallery",
+          "images": [
+            "splash-img/rake2.jpg",
+            "splash-img/rake3.jpg",
+			"splash-img/rake.jpg",
+            "splash-img/rake4.jpg"
+          ]
+        },
+        {
+          "type": "link",
+          "text": "Voir sur Cults3D",
+          "url": "https://cults3d.com/fr/..."
+        }
+      ]
+    },
+
+    {
+      "id": "gopro-mount",
+
+      "title": "Wing Camera Support",
+
+      "thumbnail": "splash-img/gpmount.jpg",
+
+      "content": [
+        {
+          "type": "title",
+          "text": "Présentation"
+        },
+        {
+          "type": "paragraph",
+          "text": "Support caméra pour wingfoil compatible GoPro, DJI et 360."
+        },
+        {
+          "type": "title",
+          "text": "Gallerie d'images"
+        },
+        {
+          "type": "gallery",	
+          "images": [
+            "splash-img/dbscrew (1).jpg",
+			"splash-img/dbscrew (2).jpg",
+			"splash-img/dbscrew (3).jpg",
+			"splash-img/dbscrew (4).jpg"
+          ]
+        },
+		{
+          "type": "link",
+          "text": "Voir sur Cults3D",
+          "url": "https://cults3d.com/fr/..."
+        }
+      ]
+    }
+	
+	
+  ]
+}

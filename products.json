@@ -30,7 +30,8 @@
 	{
       "title": "Montage & MD EMPLOI",
       "image": "printshit-img/assemblage.jpg",
-      "url": "doc_assembly.html"
+      "url": "doc_assembly.html",
+	  "loupe": true
     },
 	{
       "title": "DOCUMENTATION - Parts",
@@ -43,6 +44,18 @@
       "url": "404.html"
     },
 	    {
+      "title": "AmmoBox 7.62x51 25u",
+      "image": "printshit-img/762-25.jpg",
+      "url": "404.html",
+	  "loupe": true
+    },
+	    {
+      "title": "AmmoBox 9mm 50u",
+      "image": "printshit-img/9mm.jpg",
+      "url": "404.html",
+	  "loupe": true
+    },
+		    {
       "title": "SH1TN4DE Preview Body4",
       "image": "printshit-img/poigne.jpg",
       "url": "404.html"
